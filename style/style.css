@@ -18,6 +18,10 @@ button:hover {
   cursor: pointer;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hide {
   display: none;
 }
@@ -302,7 +306,7 @@ button:hover {
 .invest-section .invest-block__title {
   height: 400px;
   width: 400px;
-  border: 1px solid #2630a4;
+  border: 1px solid #3e65b3;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -312,13 +316,13 @@ button:hover {
   align-self: center;
 }
 .invest-section .invest-block__title--number {
-  color: #2630a4;
+  color: #3e65b3;
   font-size: 148px;
   font-family: sans-serif;
 }
 .invest-section .invest-block__title--text {
   font-family: sans-serif;
-  color: #2630a4;
+  color: #3e65b3;
   max-width: 170px;
 }
 .invest-section .invest-block__content {
@@ -351,13 +355,13 @@ button:hover {
 }
 .invest-section .invest-block__content--block .content-block__title {
   font-family: sans-serif;
-  color: #2630a4;
+  color: #3e65b3;
   font-size: 16px;
   margin-bottom: 10px;
 }
 .invest-section .invest-block__content--block .content-block__text {
   font-family: sans-serif;
-  color: #007eda;
+  color: #3e65b3;
 }
 
 .form-section {
@@ -407,4 +411,55 @@ button:hover {
   color: white;
   font-weight: 600;
   border-radius: 2px;
+}
+
+.our-projects-section {
+  padding: 20px 0;
+}
+.our-projects-section .our-projects-block__title {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.our-projects-section .our-projects-block__text {
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.our-projects-section .our-projects-block .examples__title {
+  margin-bottom: 50px;
+  font-size: 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.our-projects-section .our-projects-block .examples__blocks {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.our-projects-section .our-projects-block .examples__blocks--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.our-projects-section .our-projects-block .examples__blocks--content .examples__text {
+  max-width: 250px;
+  font-size: 16px;
+  font-family: sans-serif;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.our-projects-section .our-projects-block .examples__blocks--content .examples__img {
+  display: flex;
+  width: 350px;
+  height: 250px;
+}
+.our-projects-section .our-projects-block .examples__blocks--content .examples__img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

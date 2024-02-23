@@ -116,3 +116,7 @@ function show(selector) {
     selector.classList.remove('hide');
     selector.classList.add('show');
 }
+
+document.querySelector('.button-block-of-flats').addEventListener('click', () => {
+    window.scrollBy(0, document.querySelector('.easy-to-install-section').clientHeight);
+});
