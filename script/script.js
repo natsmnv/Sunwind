@@ -38,45 +38,81 @@ input.addEventListener('input', (e) => {
 
 const form = document.querySelector('.order__form');
 const formInputs = form.querySelectorAll('input');
+const formTexts = form.querySelectorAll('.order__input--text');
+const formErrors = form.querySelectorAll('.order__error');
 
-formInputs.forEach(input => {
-    let nextElement = input.nextSibling.nextSibling.innerHTML;
-    input.addEventListener('input', (e) => {
-        let target = e.target;
-        if (target.value !== '') {
-            target.nextSibling.nextSibling.innerHTML = '';
-        } else {
-            target.nextSibling.nextSibling.innerHTML = nextElement;
-        }
-    });
-});
+form.addEventListener('click', (e) => {
+    let target = e.target;
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    for (let i = 0; i < formInputs.length - 1; i++) {
-        let error = document.createElement('div');
-        error.classList.add('order__error');
-        error.textContent = `Заповніть поле`;
-
-        if (formInputs[i].value == '') {
-            formInputs[i].parentElement.append(error);
-            if(formInputs[i].parentElement.childNodes[6]) {
-                error.remove();
-            }
-        } else {
-            error.remove();
-        }
-
-        formInputs[i].addEventListener('input', (e) => {
-            let target = e.target;
-
-            if (!target.value == '') {
-                error.remove();
-            } else {
-                formInputs[i].parentElement.append(error);
-            }
+    if (target && target.classList.contains('order__input')) {
+        formInputs.forEach((input, i) => {
+            input.addEventListener('input', () => {
+                if (target == input && target.value !== '') {
+                    hide(formTexts[i]);
+                } else {
+                    show(formTexts[i]);
+                }
+            });
         });
     }
-    form.reset();
 });
+
+const postData = async (url, data) => {
+    let res = await fetch(url, {
+        method: "POST",
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: data
+    });
+
+    return await res.json();
+}
+
+function bindPostData(form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        let hasEmptyInputs = false;
+
+        for (let i = 0; i < formInputs.length - 1; i++) {
+            if (formInputs[i].value == '') {
+                show(formErrors[i]);
+                hasEmptyInputs = true;
+            } else {
+                hide(formErrors[i]);
+            }
+
+            formInputs[i].addEventListener('input', (e) => {
+                if (e.target.value == '') {
+                    show(formErrors[i]);
+                } else {
+                    hide(formErrors[i]);
+                }
+            })
+        }
+
+        if (hasEmptyInputs) {
+            return;
+        }
+
+        const json = JSON.stringify(Object.fromEntries(formData.entries()));
+        postData('http://localhost:3000/requests', json)
+        .then(data => {
+            console.log(data);
+        })
+        .finally(() => formData.reset());
+    });
+}
+
+bindPostData(form);
+
+function hide(selector) {
+    selector.classList.remove('show');
+    selector.classList.add('hide');
+}
+
+function show(selector) {
+    selector.classList.remove('hide');
+    selector.classList.add('show');
+}

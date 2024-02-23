@@ -24,6 +24,14 @@ button:hover {
     object-fit: cover;
 }
 
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 .header {
     background-color: rgba(100, 100, 100, 0.5);
     padding: 10px 0;
