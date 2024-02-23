@@ -1,0 +1,402 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.header {
+  background-color: rgba(100, 100, 100, 0.5);
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__wrapper .logo {
+  max-width: 50px;
+  width: 100%;
+  height: 100%;
+}
+.header__wrapper .logo img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__wrapper .nav {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.header__wrapper .nav--link {
+  font-family: sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.main-section {
+  background-image: url("./../img/main-img.jpg");
+  background-size: cover;
+}
+.main-section .main-block {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-section .main-block .main__title {
+  font-family: sans-serif;
+  font-size: 30px;
+  color: white;
+  max-width: 560px;
+}
+.main-section .main-block .main__arrow {
+  position: absolute;
+  bottom: 0;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+}
+.main-section .main-block .main__arrow--img {
+  max-width: 100px;
+  height: 100%;
+  width: 100%;
+}
+.main-section .main-block .main__arrow--img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-section .main-block .main__arrow--text {
+  font-family: sans-serif;
+  color: white;
+  max-width: 100px;
+}
+
+.why-do-you-need-section {
+  padding: 20px 0;
+  background: linear-gradient(45deg, rgb(221, 147, 83), rgb(241, 229, 108));
+  position: relative;
+}
+.why-do-you-need-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: brightness(90%);
+}
+.why-do-you-need-section .why-do-you-need-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.why-do-you-need-section .why-do-you-need-block .why-do-you-need__title {
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
+  font-weight: 800;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.why-do-you-need-section .why-do-you-need-block .why-do-you-need__text {
+  color: white;
+  z-index: 1;
+}
+
+.image-section {
+  background-image: url("./../img/main-img.jpg");
+  min-height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.reasons-section {
+  padding: 20px 0;
+  background: linear-gradient(45deg, rgb(221, 147, 83), rgb(241, 229, 108));
+  position: relative;
+}
+.reasons-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: brightness(90%);
+}
+.reasons-section .reasons-blocks {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+.reasons-section .reasons-blocks__block {
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  background: #1F252E;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.easy-to-install-section {
+  background: linear-gradient(45deg, rgb(221, 147, 83), rgb(241, 229, 108));
+  padding: 30px 0;
+}
+.easy-to-install-section .easy-to-install-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.easy-to-install-section .easy-to-install-block .easy-to-install__img {
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.easy-to-install-section .easy-to-install-block .easy-to-install__img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.easy-to-install-section .easy-to-install-block__content--title {
+  font-family: sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.easy-to-install-section .easy-to-install-block__content--buttons .buttons__button {
+  padding: 5px;
+  background: #242836;
+  color: white;
+  border-radius: 3px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.easy-to-install-section .easy-to-install-block__content--text {
+  font-family: sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.easy-to-install-section .easy-to-install-block__content--button {
+  padding: 5px;
+  background: #242836;
+  color: white;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.calculate-section {
+  background: #6180E9;
+  padding: 20px;
+}
+.calculate-section .calculate-block {
+  display: flex;
+  align-items: center;
+}
+.calculate-section .calculate-block__info {
+  max-width: 750px;
+  margin-right: 30px;
+}
+.calculate-section .calculate-block__info--title {
+  font-size: 24px;
+  color: white;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+.calculate-section .calculate-block__info--text {
+  font-size: 20px;
+  color: white;
+  font-family: sans-serif;
+}
+.calculate-section .calculate-block__info--subtext {
+  font-family: sans-serif;
+  color: white;
+  font-size: 12px;
+}
+.calculate-section .calculate-block__calculator {
+  display: flex;
+  flex-direction: column;
+}
+.calculate-section .calculate-block__calculator--input {
+  min-width: 600px;
+  min-height: 25px;
+  margin-bottom: 10px;
+}
+.calculate-section .calculate-block__calculator--power, .calculate-section .calculate-block__calculator--area, .calculate-section .calculate-block__calculator--year-amount, .calculate-section .calculate-block__calculator--month-cycle, .calculate-section .calculate-block__calculator--year-saving, .calculate-section .calculate-block__calculator--month-saving {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+.calculate-section .calculate-block__calculator--power p, .calculate-section .calculate-block__calculator--power span, .calculate-section .calculate-block__calculator--area p, .calculate-section .calculate-block__calculator--area span, .calculate-section .calculate-block__calculator--year-amount p, .calculate-section .calculate-block__calculator--year-amount span, .calculate-section .calculate-block__calculator--month-cycle p, .calculate-section .calculate-block__calculator--month-cycle span, .calculate-section .calculate-block__calculator--year-saving p, .calculate-section .calculate-block__calculator--year-saving span, .calculate-section .calculate-block__calculator--month-saving p, .calculate-section .calculate-block__calculator--month-saving span {
+  color: white;
+  font-family: sans-serif;
+}
+.calculate-section .calculate-block__calculator--power p, .calculate-section .calculate-block__calculator--area p, .calculate-section .calculate-block__calculator--year-amount p, .calculate-section .calculate-block__calculator--month-cycle p, .calculate-section .calculate-block__calculator--year-saving p, .calculate-section .calculate-block__calculator--month-saving p {
+  font-size: 12px;
+}
+.calculate-section .calculate-block__calculator--power span, .calculate-section .calculate-block__calculator--area span, .calculate-section .calculate-block__calculator--year-amount span, .calculate-section .calculate-block__calculator--month-cycle span, .calculate-section .calculate-block__calculator--year-saving span, .calculate-section .calculate-block__calculator--month-saving span {
+  font-size: 24px;
+  font-weight: 600;
+}
+.calculate-section .calculate-block__calculator--month-saving {
+  margin-bottom: 20px;
+}
+.calculate-section .calculate-block__calculator--get-consultation {
+  align-self: center;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  color: #6180E9;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.invest-section {
+  padding: 30px 0;
+}
+.invest-section .invest-block {
+  display: flex;
+  justify-content: space-around;
+}
+.invest-section .invest-block__title {
+  height: 400px;
+  width: 400px;
+  border: 1px solid #2630a4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-self: center;
+}
+.invest-section .invest-block__title--number {
+  color: #2630a4;
+  font-size: 148px;
+  font-family: sans-serif;
+}
+.invest-section .invest-block__title--text {
+  font-family: sans-serif;
+  color: #2630a4;
+  max-width: 170px;
+}
+.invest-section .invest-block__content {
+  display: flex;
+  flex-direction: column;
+}
+.invest-section .invest-block__content--wrapper {
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.invest-section .invest-block__content--wrapper .invest-block__content--block {
+  margin-bottom: 0;
+}
+.invest-section .invest-block__content--block {
+  max-width: 200px;
+  margin-bottom: 50px;
+}
+.invest-section .invest-block__content--block .content-block__img {
+  max-height: 50px;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.invest-section .invest-block__content--block .content-block__img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.invest-section .invest-block__content--block .content-block__title {
+  font-family: sans-serif;
+  color: #2630a4;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.invest-section .invest-block__content--block .content-block__text {
+  font-family: sans-serif;
+  color: #007eda;
+}
+
+.form-section {
+  padding: 30px 0;
+  background: linear-gradient(45deg, #f8f1fa, #e2edfc);
+}
+.form-section .form-block {
+  display: flex;
+  justify-content: space-around;
+}
+.form-section .form-block__title {
+  max-width: 380px;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+.form-section .form-block .order__form {
+  row-gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.form-section .form-block .order__form--wrapper {
+  position: relative;
+}
+.form-section .form-block .order__form--wrapper input {
+  background: transparent;
+  min-width: 350px;
+  padding: 8px 10px;
+  border-radius: 2px;
+  border: 1px solid #888d95;
+  position: relative;
+  z-index: 2;
+}
+.form-section .form-block .order__form--wrapper .order__input--text {
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  color: #abaeb7;
+  font-family: sans-serif;
+}
+.form-section .form-block .order__form--wrapper .order__input--text span {
+  color: red;
+}
+.form-section .form-block .order__form .order__button {
+  border: none;
+  padding: 10px;
+  background: #c93848;
+  color: white;
+  font-weight: 600;
+  border-radius: 2px;
+}/*# sourceMappingURL=style.css.map */
