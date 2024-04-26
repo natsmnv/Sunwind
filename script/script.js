@@ -101,7 +101,7 @@ function bindPostData(form) {
         .then(data => {
             console.log(data);
         })
-        .finally(() => formData.reset());
+        .finally(() => form.reset());
     });
 }
 
@@ -119,4 +119,25 @@ function show(selector) {
 
 document.querySelector('.button-block-of-flats').addEventListener('click', () => {
     window.scrollBy(0, document.querySelector('.easy-to-install-section').clientHeight);
+});
+
+document.querySelector('.button-for-commercial-usage').addEventListener('click', () => {
+    window.scrollTo({
+        top: document.querySelector('.commercial-usage-section').offsetTop,
+        behavior: 'smooth'
+    });
+});
+
+document.querySelector('.button-solving-problem').addEventListener('click', () => {
+    window.scrollTo({
+        top: document.querySelector('.solving-problem-section').offsetTop,
+        behavior: 'smooth'
+    });
+});
+
+document.querySelector('.easy-to-install-block__content--button').addEventListener('click', () => {
+    window.scrollTo({
+        top: document.querySelector('.form-section').offsetTop,
+        behavior: 'smooth'
+    });
 });

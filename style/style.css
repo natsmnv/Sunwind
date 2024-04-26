@@ -76,6 +76,7 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-top: 100px;
 }
 .main-section .main-block .main__title {
   font-family: sans-serif;
@@ -291,7 +292,7 @@ html {
 .commercial-usage-section .commercial-usage__block {
   display: flex;
   justify-content: space-between;
-  padding: 100px 0;
+  padding: 30px 0;
 }
 .commercial-usage-section .commercial-usage__block--title {
   font-size: 48px;
@@ -299,7 +300,7 @@ html {
   text-transform: uppercase;
   text-decoration: underline;
   color: #caaa4b;
-  align-self: center;
+  align-self: flex-start;
 }
 .commercial-usage-section .commercial-usage__block--text {
   font-size: 32px;
