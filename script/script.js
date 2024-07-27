@@ -2,9 +2,7 @@ let input = document.querySelector('.calculate-block__calculator--input');
 let power = document.querySelector('.power__result');
 let area = document.querySelector('.area__result');
 let yearAmount = document.querySelector('.year-amount__result');
-// let monthCycle = document.querySelector('.month-cycle__result');
 let yearSaving = document.querySelector('.year-saving__result');
-// let monthSaving = document.querySelector('.month-saving__result');
 
 input.addEventListener('input', (e) => {
     let value = +e.target.value;
@@ -14,23 +12,17 @@ input.addEventListener('input', (e) => {
         power.textContent = '0.00 кВт';
         area.textContent = '0.00 м.кв.';
         yearAmount.textContent = '0.00 кВт-год';
-        // monthCycle.textContent = '0.00 кВт-год';
         yearSaving.textContent = '0.00 $';
-        // monthSaving.textContent = '0.00 $';
     } else {
         powerValue = (value / 700).toFixed(1);
         areaValue = (powerValue * 1000 / 575 * 2.76).toFixed(2);
         yearAmountValue = (powerValue * 1100);
-        // monthCycleValue = (value * 5).toFixed(2);
         yearSavingValue = ((yearAmountValue * 4.32) / 41).toFixed(2);
-        // monthSavingValue = (value * 7).toFixed(2);
 
         power.textContent = `${powerValue} кВт`;
         area.textContent = `${areaValue} м.кв.`;
         yearAmount.textContent = `${yearAmountValue} кВт-год`;
-        // monthCycle.textContent = `${monthCycleValue} кВт-год`;
         yearSaving.textContent = `${yearSavingValue} $`;
-        // monthSaving.textContent = `${monthSavingValue} $`;
     }
 });
 
@@ -136,6 +128,13 @@ document.querySelector('.button-solving-problem').addEventListener('click', () =
 });
 
 document.querySelector('.easy-to-install-block__content--button').addEventListener('click', () => {
+    window.scrollTo({
+        top: document.querySelector('.form-section').offsetTop,
+        behavior: 'smooth'
+    });
+});
+
+document.querySelector('.calculate-block__calculator--get-consultation').addEventListener('click', () => {
     window.scrollTo({
         top: document.querySelector('.form-section').offsetTop,
         behavior: 'smooth'
