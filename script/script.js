@@ -93,7 +93,13 @@ function bindPostData(form) {
         .then(data => {
             console.log(data);
         })
-        .finally(() => form.reset());
+        .finally(() => {
+            form.reset();
+            formTexts.forEach(text => {
+                hide(text);
+                show(text);
+            })
+        });
     });
 }
 
